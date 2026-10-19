@@ -1,0 +1,25 @@
+---
+title: "My second quarto document" 
+author: Ashlan Guengerich
+format: html
+execute:
+  echo: false
+---
+
+```{r}
+#| message: false
+#| label: setup
+library(tidyverse)
+```
+
+```{r}
+ggplot(iris, aes(x = Sepal.Width, y = Sepal.Length, color = Species)) +
+  geom_point() +
+  labs(
+    title = "Measurements for Different Species of Iris",
+    subtitle = "Virginia has the longest sepals",
+    x = "Sepal Width",
+    y = "Sepal Length",
+    color = "Species",
+    caption = "Fisher (1936)"
+```
